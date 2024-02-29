@@ -38,9 +38,11 @@ In this section, you can watch your To-Do list. Just enter the following command
 
 If you enter this command, you will see a structure 
 
-| like this: |    |   |   |
-| --- | --- | --- | --- |
+like this: 
+
+
 |Task List:|    |   |   |
+| --- | --- | --- | --- |
 |Index  |Title  |Priority|  Done |      
 | 1 | Task 1 | Low | 1 |
 |2 | Task 2 | Medium | 0 |
