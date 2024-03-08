@@ -117,7 +117,7 @@ class TodoList:
         # brow the tasks row by row
         for row in read:
 
-            # check identity title of row with given title
+            # Checking whether the title of the row is the same as the given title.
             if title == row[0]:
 
                 # give the True value to flag for existing the title
@@ -149,28 +149,59 @@ class TodoList:
             
             # showing the successfull update message
             print(f'Task "{title}" updated successfully.')
+
         else:
 
-            # if there is no such this title showing the Invalid title. message
+            # if there is no such this title showing the "Invalid title" message
             print('Invalid title.')
 
 
-
+    # define the delete_task method for deleting the specific task from stored tasks
     def delete_task(self, title):
+
+        # open the csv file as file
         with open(self.file_name) as file:
+
+            # reading all information from file
             read = list(csv.reader(file))
+
+        # copying the information into temporary variable
         temp = read.copy()
+
+        # define the flag for checking the specific task is exist or not
         flag = False
+
+        # brow the tasks row by row
         for row in temp:
+
+            # Checking whether the title of the row is the same as the given title.
             if title == row[0]:
+            
+                # give the True value to flag for existing the title
                 flag = True
+
+                # remove the task from stored task
                 read.remove(row)
+        
+        # if title is exist in tasks
         if flag:
+
+            # open csv file as file
             with open(self.file_name, 'w', newline='') as file:
+                
+                # create writer object for writing values into file
                 writer = csv.writer(file)
+
+                # write updated tasks into the file
                 writer.writerows(read)
+
+            # showing the deleted successfull message
             print(f'Task "{title}" deleted successfully.')
+
+        # if there is no such this title 
         else:
+
+            # showing Invalid title.
             print('Invalid title.')
             
     def clear_list(self):
