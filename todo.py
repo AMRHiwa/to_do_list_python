@@ -204,11 +204,22 @@ class TodoList:
             # showing Invalid title.
             print('Invalid title.')
             
+    # define the clear_list method for clearing the tasks
     def clear_list(self):
+
+        # create a empty list
         empty_list = list()
+
+        # open csv file as file
         with open(self.file_name, 'w', newline='') as file:
+            
+            # create a writer object for writing values into file
             writter = csv.writer(file)
+
+            # writing the empty list into the file
             writter.writerows(empty_list)
+
+            # showing the message for user
             print('To-do list cleared successfully.')
 
     def get_task(self, title):
