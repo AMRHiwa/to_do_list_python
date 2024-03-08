@@ -222,45 +222,92 @@ class TodoList:
             # showing the message for user
             print('To-do list cleared successfully.')
 
+    # defining the get_task method for showing a specific task
     def get_task(self, title):
+
+        # open csv file as file
         with open(self.file_name) as file:
+
+            # reading all information from file and save them in read variable
             read = list(csv.reader(file))
-        flag = False
+
+        # brow the tasks row by row
         for row in read:
+
+            # Checking whether the title of the row is the same as the given title.
             if title == row[0]:
-                flag = True
+
+                # showing the task as specific form for user
                 print("{:<15} {:<10} {:<10}".format('Title', 'Priority', 'Done'))
                 print("{:<15} {:<10} {:<10}".format(row[0], row[1], row[2]))
-        # if flag:
-        #     print()
+
+# defining the main function
 def main():
+
+    # create a object from TodoList class
     obj = TodoList()
+
+    # getting the arguments that user writes them in terminal
     arg_pars_command = sys.argv
+
+    # Checking the first word that the user wrote in the terminal commands, is the word "create"?
     if arg_pars_command[1] == 'create':
+
+        # Checking whether the length of the command entered by the user in the terminal is equal to 5 or not?
         if len(arg_pars_command) == 5:
+
+            # call create_task method with title, priority, done arguments
             obj.create_task(arg_pars_command[2], arg_pars_command[3], arg_pars_command[4])
+
+        # Checking whether the length of the command entered by the user in the terminal is equal to 4 or not?
         elif len(arg_pars_command) == 4:
+
+            # call create_task method with title, priority arguments
             obj.create_task(arg_pars_command[2], arg_pars_command[3])
+
         else:
+
+            # call create_task method with title argument
             obj.create_task(arg_pars_command[2])
     
+    # Checking the first word that the user wrote in the terminal commands, is the word "update"?
     elif arg_pars_command[1] == 'update':
+
+        # calling update_task with title, field, new_value arguments
         obj.update_task(arg_pars_command[2], arg_pars_command[3], arg_pars_command[4])
-                
+
+    # Checking the first word that the user wrote in the terminal commands, is the word "delete"?
     elif arg_pars_command[1] == 'delete':
+
+        # calling delete_task with title argument
         obj.delete_task(arg_pars_command[2])
     
+    # Checking the first word that the user wrote in the terminal commands, is the word "create"?
     elif arg_pars_command[1] == 'clear':
+
+        # calling the clear_list method
         obj.clear_list()
 
+    # Checking the first word that the user wrote in the terminal commands, is the word "search"?
     elif arg_pars_command[1] == 'search':
+
+        # calling get_task with title argument
         obj.get_task(arg_pars_command[2])
 
+    # Checking the first word that the user wrote in the terminal commands, is the word "list"?
     elif arg_pars_command[1] == 'list':
+
+        # calling the list method
         obj.list_tasks()    
 
+    # If the entered word is none of the above words:
     else:
+
+        # showing the "Invalid Command." message.
         print("Invalid command.")
 
+# Checking whether the main file is executed?
 if __name__ == "__main__":
+
+    # calling the main function
     main()
