@@ -3,12 +3,14 @@
 # to do list programm
 
 
-
+# Import Libraries
 import csv
 import os
 import sys
 
 
+
+# Create class for Tasks with title, priority and done attributes
 class Task:
     def __init__(self, title, priority='Medium', done=0):
         self.title = title
