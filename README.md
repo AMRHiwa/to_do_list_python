@@ -16,6 +16,9 @@ The tools of this program are as follows:
 * <a href='#delete'>Delete Item</a>
 * <a href='#list'>Show list</a>
 * <a href='#update'>Update Item</a>
+* <a href='#clear'>Clear Items</a>
+* <a href='#search'>Search Item</a>
+
 
 <h4 id='add'>Add Item</h4>
 In this section, you can add new items to the program. Just enter the following command in the command prompt environment:
@@ -55,3 +58,13 @@ In this section, you can edit your To-Do list priority or Done feature of your I
 or
 
 > `python todo.py update title Done new-value`
+
+<h4 id='clear'>Clear Items</h4>
+In this section, you can delete all Items and Clear the to do list. Just enter the following command in the command prompt environment:
+
+> `python todo.py clear`
+
+<h4 id='search'>Search Item</h4>
+In this section, you can search the items by them names. Just enter the following command in the command prompt environment:
+
+> `python todo.py search title`
