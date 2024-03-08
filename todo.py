@@ -67,9 +67,16 @@ class TodoList:
                 # write each task in file row by row
                 writer.writerow([row.title, row.priority, row.done])
 
+    # define the create_task for create a new task and save it into csv file
     def create_task(self, title, priority='Medium', done=0):
+
+        # adding a new Task's object with given parameter into task's variable
         self.tasks.append(Task(title, priority, done))
+
+        # call the save_tasks method for save new task into csv file
         self.save_tasks()
+
+        # showing the successfully message for creating task.
         print(f'Task \"{title}\" created successfully.')
 
     def list_tasks(self):
