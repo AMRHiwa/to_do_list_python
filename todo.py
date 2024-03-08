@@ -52,10 +52,19 @@ class TodoList:
                         # adding the stored tasks in csvfile as Task's object in tasks variable
                         self.tasks.append(Task(row[0], row[1], row[2]))
 
+    # define the save_tasks for saving tasks from tasks variable into csv file
     def save_tasks(self):
+
+        # opening the csv file as csvfile
         with open(self.file_name, 'w', newline='') as csvfile:
+
+            # create the writer object for writing into csv file
             writer = csv.writer(csvfile)
+
+            # Browse stored tasks in tasks variable row by row
             for row in self.tasks:
+
+                # write each task in file row by row
                 writer.writerow([row.title, row.priority, row.done])
 
     def create_task(self, title, priority='Medium', done=0):
