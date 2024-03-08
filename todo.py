@@ -18,10 +18,16 @@ class Task:
         self.done = done
 
 
+# Create TodoList class to manage the to do list program
 class TodoList:
     def __init__(self):
+        # variabe to save file and directory
         self.file_name = 'todo.csv'
+
+        # tasks use for saving the tasks in one list as object from Task class
         self.tasks = list()
+
+        # call the load_tasks method for load tasks from file to program
         self.load_tasks()
 
     def load_tasks(self):
