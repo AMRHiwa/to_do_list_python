@@ -30,13 +30,26 @@ class TodoList:
         # call the load_tasks method for load tasks from file to program
         self.load_tasks()
 
+
+    # define load_tasks method for load tasks from file to program
     def load_tasks(self):
+
+        # Checking the existence of the file in the specified path
         if os.path.exists(self.file_name):
+
+            # open csv file as csvfile
             with open(self.file_name) as csvfile:
+
+                # read all information from file and save in file_read variable
                 file_read = csv.reader(csvfile)
+
+                # Browse stored information row by row
                 for row in file_read:
-                    # print(row)
+
+                    # Checking the length of stored information
                     if len(row) == 3:
+
+                        # adding the stored tasks in csvfile as Task's object in tasks variable
                         self.tasks.append(Task(row[0], row[1], row[2]))
 
     def save_tasks(self):
