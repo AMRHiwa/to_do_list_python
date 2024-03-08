@@ -21,6 +21,7 @@ class Task:
 # Create TodoList class to manage the to do list program
 class TodoList:
     def __init__(self):
+
         # variabe to save file and directory
         self.file_name = 'todo.csv'
 
@@ -101,23 +102,56 @@ class TodoList:
             print("No tasks found.")
 
 
+    # define update_task for update and change the stored tasks
     def update_task(self, title, field, edit):
+
+        # open csv file as csvfile
         with open(self.file_name) as file:
+
+            # read all information in csvfile as list
             read = list(csv.reader(file))
+
+        # define the flag for checking the specific task is exist or not
         flag = False
+
+        # brow the tasks row by row
         for row in read:
+
+            # check identity title of row with given title
             if title == row[0]:
+
+                # give the True value to flag for existing the title
                 flag = True
+
+                # checking the is field done
                 if field == 'done':
+
+                    # setting new value
                     row[2] = edit
+
+                # checking the is field priority
                 elif field == 'priority':
+
+                    # setting new value
                     row[1] = edit
+        
+        # if title is exist in tasks
         if flag:
+
+            # opening csv file as file
             with open(self.file_name, 'w', newline='') as file:
+                
+                # create the writer object for writing values into file
                 writer = csv.writer(file)
+
+                # write the updated tasks into file
                 writer.writerows(read)
+            
+            # showing the successfull update message
             print(f'Task "{title}" updated successfully.')
         else:
+
+            # if there is no such this title showing the Invalid title. message
             print('Invalid title.')
 
 
