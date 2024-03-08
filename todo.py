@@ -79,15 +79,25 @@ class TodoList:
         # showing the successfully message for creating task.
         print(f'Task \"{title}\" created successfully.')
 
+
+    # define List_tasks for showing the stored tasks in a table
     def list_tasks(self):
+
+        # Checking the presence of at least one task in the tasks variable.
         if self.tasks:
+
+            # showing the task as below form
             print('Task List:')
             print("{:<6} {:<15} {:<10} {:<10}".format('Index', "Title", "Priority", "Done"))
             index = 1
             for  row in self.tasks:
                 print("{:<6} {:<15} {:<10} {:<10}".format(index, str(row.title), str(row.priority), str(row.done)))
                 index += 1
+        
+        # if there is no any task in tasks variable
         else:
+
+            # showing below message.
             print("No tasks found.")
 
 
