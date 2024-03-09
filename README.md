@@ -60,7 +60,8 @@ or
 > `python todo.py update title Done new-value`
 
 
-
+---
+---
 
 <h3 id='structure'> Structure of program :</h3>
 
@@ -71,3 +72,7 @@ This program is implemented by two classes and a function, whose features are me
 + <a href='#task_class'>main Function</a>
 
 <h4 id='task_class'>Class Task:</h4>
+Using an initial function, this class considers and creates an object with the attributes title, priority, and done for better management of tasks.
+
+<h4 id='todolist_class'>TodoList Task:</h4>
+This class is used to manage "tasks" in the program and the following methods are defined and implemented to implement this management:
