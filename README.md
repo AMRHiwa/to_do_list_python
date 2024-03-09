@@ -55,3 +55,15 @@ In this section, you can edit your To-Do list priority or Done feature of your I
 or
 
 > `python todo.py update title Done new-value`
+
+
+
+<h3 id='structure'> Structure of program :</h3>
+
+This program is implemented by two classes and a function, whose features are mentioned below:
+
++ <a href='#task_class'>Class Task</a>
++ <a href='#task_class'>Class TodoList</a>
++ <a href='#task_class'>main Function</a>
+
+<h4 id='task_class'>Class Task:</h4>
