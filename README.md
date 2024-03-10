@@ -5,7 +5,7 @@ In the "To Do List" program, it has been tried to be implemented in Python and t
 
 This guide is prepared for you in two parts:
 * <a href='#guide'>Program guide.</a>
-* <a href=''>explains the structure of the program.</a>
+* <a href='#structure'>explains the structure of the program.</a>
 
 <h3 id='guide'> Program guide :</h3>
 This program is developed for command prompt and terminal environment. To use this program, just download the source code file and save it in your computer memory.
@@ -68,7 +68,7 @@ or
 This program is implemented by two classes and a function, whose features are mentioned below:
 
 + <a href='#task_class'>Class Task</a>
-+ <a href='#task_class'>Class TodoList</a>
++ <a href='#todolist_class'>Class TodoList</a>
 + <a href='#task_class'>main Function</a>
 
 <h4 id='task_class'>Class Task:</h4>
@@ -81,12 +81,11 @@ This class is used to manage "tasks" in the program and the following methods ar
 + <a href="#load_tasks">load_tasks</a>
 + <a href="#save_tasks">save_tasks</a>
 + <a href="#create_tasks">create_task</a>
-+ <a href="#">list_tasks</a>
-+ <a href="#">update_task</a>
-+ <a href="#">delete_task</a>
-+ <a href="#">clear_list</a>
-+ <a href="#">list_tasks</a>
-+ <a href="#">get_task</a>
++ <a href="#list_tasks">list_tasks</a>
++ <a href="#update_task">update_task</a>
++ <a href="#delete_task">delete_task</a>
++ <a href="#clear_list">clear_list</a>
++ <a href="#get_task">get_task</a>
 
 <h5 id='init'>init:</h5>
 
@@ -107,3 +106,20 @@ In this method, a new object of the task class is created by getting the informa
 <h5 id='list_tasks'>list_tasks:</h5>
 
 This method first reads the data file and then displays all the saved tasks as a table in the output.
+
+<h5 id='update_task'>update_task:</h5>
+
+This method uses the title that the user enters in the list of tasks and updates the desired task based on priority or completion status and saves it again in the data file.
+
+
+<h5 id='delete_task'>delete_task:</h5>
+
+This method first takes a title among the tasks, and if it finds the desired task, it deletes it and then re-places the remaining tasks in the data file.
+
+<h5 id='clear_list'>clear_list:</h5>
+
+This method deletes all the tasks stored in the data file.
+
+<h5 id='get_task'>get_task:</h5>
+
+By taking the title of a task, this method finds it in the list of tasks stored in the data file and displays it to the user if it exists.
