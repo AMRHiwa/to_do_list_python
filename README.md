@@ -76,3 +76,14 @@ Using an initial function, this class considers and creates an object with the a
 
 <h4 id='todolist_class'>TodoList Task:</h4>
 This class is used to manage "tasks" in the program and the following methods are defined and implemented to implement this management:
+
++ <a href="#">init</a>
++ <a href="#">load_tasks</a>
++ <a href="#">save_tasks</a>
++ <a href="#">create_task</a>
++ <a href="#">list_tasks</a>
++ <a href="#">update_task</a>
++ <a href="#">delete_task</a>
++ <a href="#">clear_list</a>
++ <a href="#">list_tasks</a>
++ <a href="#">get_task</a>
