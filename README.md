@@ -3,6 +3,8 @@ In the "To Do List" program, it has been tried to be implemented in Python and t
 
 "To-do list" is a program for managing the list of tasks that we need to do, which gives us the ability to put our tasks in our list by title, necessity, completion, and this list can be updated. and added, reduced or changed its items.
 
+<img src="screenshot/Windows PowerShell 20_12_1402 03_05_29 ب.ظ.png" width=80%>
+
 This guide is prepared for you in two parts:
 * <a href='#guide'>Program guide.</a>
 * <a href='#structure'>explains the structure of the program.</a>
