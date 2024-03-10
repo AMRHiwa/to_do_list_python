@@ -79,7 +79,7 @@ This program is implemented by two classes and a function, whose features are me
 
 + <a href='#task_class'>Class Task</a>
 + <a href='#todolist_class'>Class TodoList</a>
-+ <a href='#task_class'>main Function</a>
++ <a href='#main_function'>main Function</a>
 
 <h4 id='task_class'>Class Task:</h4>
 Using an initial function, this class considers and creates an object with the attributes title, priority, and done for better management of tasks.
@@ -133,3 +133,6 @@ This method deletes all the tasks stored in the data file.
 <h5 id='get_task'>get_task:</h5>
 
 By taking the title of a task, this method finds it in the list of tasks stored in the data file and displays it to the user if it exists.
+
+<h4 id='main_function'>main Function:</h4>
+This function, which is in charge of the main operation, first creates an object of the todolist class, then notices what command the user enters and how many arguments he has passed in addition to the main command, and calls the desired functions based on the input.
