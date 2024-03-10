@@ -60,6 +60,16 @@ or
 > `python todo.py update title Done new-value`
 
 
+<h4 id='clear'>Clear Items</h4>
+In this section, you can delete all items. Just enter the following command in the command prompt environment:
+
+> `python todo.py clear`
+
+<h4 id='search'>Search Item</h4>
+In this section, you can Search the items by them names. Just enter the following command in the command prompt environment:
+
+> `python todo.py search title`
+
 ---
 ---
 
