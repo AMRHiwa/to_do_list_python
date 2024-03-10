@@ -77,7 +77,7 @@ Using an initial function, this class considers and creates an object with the a
 <h4 id='todolist_class'>TodoList Task:</h4>
 This class is used to manage "tasks" in the program and the following methods are defined and implemented to implement this management:
 
-+ <a href="#">init</a>
++ <a href="#init_todolist">init</a>
 + <a href="#">load_tasks</a>
 + <a href="#">save_tasks</a>
 + <a href="#">create_task</a>
@@ -87,3 +87,11 @@ This class is used to manage "tasks" in the program and the following methods ar
 + <a href="#">clear_list</a>
 + <a href="#">list_tasks</a>
 + <a href="#">get_task</a>
+
+<h5 id='init_todolist'>init:</h5>
+
+In this method, we store the "path to save the file" in a variable called file_name, consider an empty list to store tasks in the tasks variable, and then call the load_tasks method to retrieve the information from the data file.
+
+<h5 id='load_tasks_todolist'>load_tasks:</h5>
+
+In this method, it reads the information stored in the data file and then stores it as a series of objects from the task class in the tasks variable.
